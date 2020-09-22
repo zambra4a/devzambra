@@ -15,10 +15,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   async asyncData({ $content }) {
     const posts = await $content('blog')
       .sortBy('createdAt:dsc')
@@ -28,5 +26,5 @@ export default Vue.extend({
 
     return { posts }
   },
-})
+}
 </script>

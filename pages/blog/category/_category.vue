@@ -15,10 +15,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   async asyncData({ $content, params }) {
     const posts = await $content('blog')
       .where({ tags: { $contains: [params.category] } })
@@ -29,5 +27,5 @@ export default Vue.extend({
 
     return { posts }
   },
-})
+}
 </script>

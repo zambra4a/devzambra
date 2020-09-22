@@ -19,10 +19,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   async asyncData({ $content, params }) {
     const page = await $content('blog', params.slug).fetch()
     const [prev, next] = await $content('blog')
@@ -37,5 +35,5 @@ export default Vue.extend({
       next,
     }
   },
-})
+}
 </script>
