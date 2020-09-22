@@ -65,6 +65,7 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
   router: {
+    base: '/devzambra/',
     linkExactActiveClass: 'text-primary',
     linkActiveClass: 'text-primary', // tailwind class with custom color
   },
