@@ -1,0 +1,16 @@
+---
+title: Sobre este blog
+description: '¿Qué encontrarás en este blog?'
+tags:
+  - General
+---
+
+Este blog trata sobre productividad, programación, buenas prácticas, patrones de diseño, reseñas de aplicaciones, tecnología y cualquier cosa que se me ocurra escribir.
+
+Quizás pueda enseñarte algunas cosas que he aprendido en mi carrera como programador, o quizás me enseñes tú a mi algo. De cualquier forma, intentaré que siempre te lleves algo nuevo o algo sobre lo que pensar.
+
+Escribiré artículos sobre buenas práticas, patrones de diseño y productividad de vez en cuando. Pero, sobre todo, escribiré artículos sobre programación.
+
+¡Espero que disfrutes la lectura y aprendas algo nuevo!
+
+¡Nos vemos en el siguiente post!
