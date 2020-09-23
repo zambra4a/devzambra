@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mt-10 flex-1 w-full h-full grid grid-flow-col grid-cols-3 gap-24 py-2"
+    class="mt-10 flex-1 w-full h-full md:grid grid-flow-col grid-cols-3 gap-8 py-2"
   >
     <article class="blog-article col-span-2">
       <h1>{{ page.title }}</h1>
