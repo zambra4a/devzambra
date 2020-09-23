@@ -9,8 +9,7 @@
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
-    "lint": "npm run lint:js && npm run lint:style",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "lint": "npm run lint:js && npm run lint:style"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
@@ -51,7 +50,6 @@
     "lint-staged": "^10.3.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.1.1",
-    "push-dir": "^0.4.1",
     "sass-loader": "^10.0.2",
     "stylelint": "^13.7.0",
     "stylelint-config-prettier": "^8.0.2",
