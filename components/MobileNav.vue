@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 sticky bottom-0 shadow-outline">
+  <div class="bg-gray-100 sticky bottom-0 with-top-shadow">
     <nav class="h-16 flex justify-center items-center">
       <ul
         class="w-full h-full grid grid-flow-col grid-cols-3 gap-4 text-center py-2"
@@ -21,3 +21,9 @@
     </nav>
   </div>
 </template>
+
+<style scoped>
+.with-top-shadow {
+  box-shadow: 0 -20px 50px -12px rgba(0, 0, 0, 0.25);
+}
+</style>
