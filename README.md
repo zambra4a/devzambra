@@ -11,6 +11,9 @@
 
 ![Profile views](https://komarev.com/ghpvc/?username=devzambra&style=flat-square)
 
+:es: :us:
+
+- :star: Trying to master Angular
 - :telescope: I'm currently exploring Vue :alien:
 - :hourglass_flowing_sand: Experimenting with Svelte and learning React
 - :microscope: Always ready to learn something new
