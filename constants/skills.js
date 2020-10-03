@@ -7,6 +7,7 @@ import SASSIcon from '@/assets/icons/sass.svg?inline'
 import VueIcon from '@/assets/icons/vue.svg?inline'
 import NuxtIcon from '@/assets/icons/nuxt.svg?inline'
 import AngularIcon from '@/assets/icons/angular.svg?inline'
+import ReactIcon from '@/assets/icons/react.svg?inline'
 
 export const SKILLS = [
   {
@@ -26,6 +27,18 @@ export const SKILLS = [
     component: AngularIcon,
   },
   {
+    name: 'Vue',
+    component: VueIcon,
+  },
+  {
+    name: 'Nuxt',
+    component: NuxtIcon,
+  },
+  {
+    name: 'React',
+    component: ReactIcon,
+  },
+  {
     name: 'Git',
     component: GitIcon,
   },
@@ -36,13 +49,5 @@ export const SKILLS = [
   {
     name: 'SASS',
     component: SASSIcon,
-  },
-  {
-    name: 'Vue',
-    component: VueIcon,
-  },
-  {
-    name: 'Nuxt',
-    component: NuxtIcon,
   },
 ]
