@@ -6,6 +6,7 @@
       <Footer />
     </div>
     <MobileNav class="sm:hidden" />
+    <ColorModeButton />
   </span>
 </template>
 

@@ -1,10 +1,13 @@
 <template>
   <div>
     <h2 class="text-center">Mis proyectos destacados</h2>
+    <div v-if="loading" class="flex justify-center items-center w-full my-4">
+      <component :is="loadingIcon" class="animate-spin-slow w-48 h-48" />
+    </div>
     <div
       v-for="(repo, index) of repos"
       :key="index"
-      class="m-5 p-5 border rounded-lg"
+      class="m-5 p-5 border rounded-lg dark:bg-gray-900"
     >
       <h3>{{ repo.name }}</h3>
       <p>{{ repo.description }}</p>
@@ -35,9 +38,12 @@ export default Vue.extend({
   data() {
     return {
       repos: [],
+      loading: false,
+      loadingIcon: require('@/assets/icons/loading.svg?inline'),
     }
   },
   mounted() {
+    this.loading = true
     fetch('https://api.github.com/users/devzambra/repos?sort=pushed', {
       headers: {
         Accept: 'application/vnd.github.v3+json',
@@ -46,7 +52,18 @@ export default Vue.extend({
       .then((res) => res.json())
       .then((data) => {
         this.repos = data.filter((d: any) => d.homepage)
+        this.loading = false
       })
   },
 })
 </script>
+
+<style scoped>
+svg path {
+  fill: #48bb78;
+}
+
+.dark-mode svg path {
+  fill: white;
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="m-5 sm:p-5 sm:shadow-lg rounded-lg">
+    <div class="m-5 sm:p-5 sm:shadow-lg rounded-lg sm:dark:bg-gray-900">
       <p>
         Hola, soy <strong>Manuel Zambrano</strong>, desarrollador web y mobile
         viviendo en Barcelona.

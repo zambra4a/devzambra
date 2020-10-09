@@ -1,0 +1,10 @@
+.dark-mode {
+  --color: #ebf4f1;
+  --bg: #2c3e50;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color 0.3s;
+}

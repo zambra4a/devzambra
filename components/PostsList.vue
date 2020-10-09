@@ -5,7 +5,9 @@
       :key="index"
       :to="'/blog/' + post.slug"
     >
-      <article class="rounded shadow-lg p-5 my-5 hover:shadow-xl">
+      <article
+        class="rounded shadow-lg p-5 my-5 hover:shadow-xl dark:bg-gray-900"
+      >
         <h1 class="font-bold text-xl">{{ post.title }}</h1>
         <small
           >🗓 {{ post.createdAt | formatDate }} - ⏳
