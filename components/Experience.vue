@@ -5,7 +5,7 @@
       <div
         v-for="(job, index) in jobs"
         :key="index"
-        class="job-card m-5 p-5 shadow-lg rounded-lg"
+        class="job-card m-5 p-5 shadow-lg rounded-lg dark:bg-gray-900"
       >
         <h2 class="text-lg font-bold">
           {{ job.city }}

@@ -1,5 +1,6 @@
 module.exports = {
   theme: {
+    darkSelector: '.dark-mode',
     extend: {
       colors: {
         primary: '#48BB78',
@@ -41,10 +42,16 @@ module.exports = {
       borderWidth: {
         6: '6px',
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
     },
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    backgroundColor: ['hover', 'responsive', ' focus', 'dark', 'dark-hover'],
+    textColor: ['hover', 'responsive', 'focus', 'dark', 'dark-hover'],
+  },
+  plugins: [require('tailwindcss-dark-mode')()],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
     enabled: process.env.NODE_ENV === 'production',

@@ -5,7 +5,7 @@
       <NuxtLink
         v-for="link of page.toc"
         :key="link.id"
-        class="p-2 my-2 cursor-pointer hover:shadow-md hover:text-primary"
+        class="p-2 my-2 cursor-pointer hover:shadow-md hover:text-primary dark-hover:bg-gray-900"
         :to="`#${link.id}`"
         tag="li"
       >
