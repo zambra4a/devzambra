@@ -8,7 +8,7 @@
       <article class="rounded shadow-lg p-5 my-5 hover:shadow-xl">
         <h1 class="font-bold text-xl">{{ post.title }}</h1>
         <small
-          >{{ post.createdAt | formatDate }} -
+          >🗓 {{ post.createdAt | formatDate }} - ⏳
           {{ post.readingTime | millisToMinutes }}</small
         >
         <p>{{ post.description }}</p>

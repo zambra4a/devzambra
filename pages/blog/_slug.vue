@@ -5,7 +5,7 @@
     <article class="blog-article col-span-2">
       <h1>{{ page.title }}</h1>
       <small
-        >{{ page.createdAt | formatDate }} -
+        >🗓 {{ page.createdAt | formatDate }} - ⏳
         {{ page.readingTime | millisToMinutes }}</small
       >
       <nuxt-content :document="page" class="mt-4" />

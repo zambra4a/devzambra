@@ -7,7 +7,7 @@ export default {
     htmlAttrs: {
       lang: 'es',
     },
-    title: 'Manuel Zambrano | Angular, Vue, Frontend developer',
+    title: 'Manuel Zambrano | Frontend developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
