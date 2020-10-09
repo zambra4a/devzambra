@@ -4,6 +4,7 @@ import VueIcon from '@/assets/icons/vue.svg?inline'
 import AngularIcon from '@/assets/icons/angular.svg?inline'
 import SwiftIcon from '@/assets/icons/swift.svg?inline'
 import InfoIcon from '@/assets/icons/info.svg?inline'
+import ReactIcon from '@/assets/icons/react.svg?inline'
 
 export const CATEGORIES = [
   {
@@ -29,5 +30,9 @@ export const CATEGORIES = [
   {
     title: 'Javascript',
     icon: JSIcon,
+  },
+  {
+    title: 'React',
+    icon: ReactIcon,
   },
 ]
