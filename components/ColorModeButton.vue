@@ -15,39 +15,31 @@ export default {
     return {
       sunIcon: require('@/assets/icons/sun.svg?inline'),
       moonIcon: require('@/assets/icons/moon.svg?inline'),
-      colorMode: 'light',
     }
   },
   computed: {
     modeIcon() {
-      return this.colorMode === 'light' ? this.moonIcon : this.sunIcon
-    },
-    mode() {
-      if (process.browser) {
-        const activeMode = localStorage.getItem('colorMode')
-        return activeMode && (activeMode === 'light' || activeMode === 'dark')
-          ? activeMode
-          : 'light'
-      }
-      return 'light'
+      return this.$colorMode.preference === 'light'
+        ? this.moonIcon
+        : this.sunIcon
     },
   },
   mounted() {
-    this.$colorMode.preference = this.mode
-    this.colorMode = this.mode
+    if (this.$colorMode.preference === 'system') {
+      this.$colorMode.preference = 'light'
+    }
   },
   methods: {
     setColorMode() {
+      let colorMode = 'light'
       if (process.browser) {
-        if (this.colorMode === 'light') {
-          localStorage.setItem('colorMode', 'dark')
-          this.colorMode = 'dark'
+        if (this.$colorMode.preference === 'light') {
+          colorMode = 'dark'
         } else {
-          localStorage.setItem('colorMode', 'light')
-          this.colorMode = 'light'
+          colorMode = 'light'
         }
       }
-      this.$colorMode.preference = this.colorMode
+      this.$colorMode.preference = colorMode
     },
   },
 }
