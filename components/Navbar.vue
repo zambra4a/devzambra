@@ -12,7 +12,7 @@
           <li class="px-2 border-r-2 links">
             <nuxt-link to="/blog" class="link"> Blog </nuxt-link>
           </li>
-          <li class="px-2 links">
+          <li class="px-2 border-r-2 links">
             <nuxt-link to="/projects" class="link"> Proyectos </nuxt-link>
           </li>
           <li class="px-2 links">
