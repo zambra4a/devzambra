@@ -59,11 +59,37 @@
         <h2 class="text-3xl">Últimas entradas del blog</h2>
         <PostsList :posts="posts" />
       </section>
+      <section>
+        <h2 class="text-3xl mb-4">Últimos capítulos del podcast</h2>
+        <article v-for="item in items" :key="item.guid" class="">
+          <div
+            class="flex flex-col justify-between items-center rounded shadow-lg p-5 my-5 hover:shadow-xl dark:bg-gray-900"
+          >
+            <div class="flex flex-row justify-between items-center">
+              <div>
+                <img :src="item.itunes.image" class="w-40" />
+              </div>
+              <div class="ml-4">
+                <h3 class="font-bold text-xl">{{ item.title }}</h3>
+                <p>{{ item.contentSnippet }}</p>
+              </div>
+            </div>
+            <div class="flex w-full mt-2">
+              <audio controls class="flex w-full rounded">
+                <source :src="item.enclosure.url" :type="item.enclosure.type" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </article>
+      </section>
     </section>
   </main>
 </template>
 
 <script>
+const Parser = require('rss-parser')
+
 export default {
   async asyncData({ $content }) {
     const posts = await $content('blog')
@@ -71,8 +97,12 @@ export default {
       .sortBy('createdAt:desc')
       .limit(3)
       .fetch()
+    const rss = await new Parser().parseURL(
+      'https://anchor.fm/s/3f0ee6d0/podcast/rss'
+    )
+    const { items } = rss
 
-    return { posts }
+    return { posts, items }
   },
 }
 </script>
