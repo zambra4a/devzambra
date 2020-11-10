@@ -65,8 +65,8 @@
           <div
             class="flex flex-col justify-between items-center rounded shadow-lg p-5 my-5 hover:shadow-xl dark:bg-gray-900"
           >
-            <div class="flex flex-row justify-between items-center">
-              <div>
+            <div class="flex flex-col sm:flex-row justify-between items-center">
+              <div class="sm:mb-0 mb-4">
                 <img :src="item.itunes.image" class="w-40" />
               </div>
               <div class="ml-4">
