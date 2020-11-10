@@ -29,7 +29,8 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "prism-themes": "^1.4.0",
-    "reading-time": "^1.2.0"
+    "reading-time": "^1.2.0",
+    "rss-parser": "^3.9.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
