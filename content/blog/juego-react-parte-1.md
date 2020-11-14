@@ -1,6 +1,7 @@
 ---
 title: 'Creando un juego con React: Parte 1'
 description: 'Creamos un juego de supervivencia para la web hecho con React desde cero'
+github: 'https://github.com/devzambra/devzambra/edit/master/content/blog/juego-react-parte-1.md'
 tags:
   - React
 ---

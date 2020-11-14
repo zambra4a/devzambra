@@ -6,8 +6,11 @@
       <h1>{{ page.title }}</h1>
       <small
         >🗓 {{ page.createdAt | formatDate }} - ⏳
-        {{ page.readingTime | millisToMinutes }}</small
-      >
+        {{ page.readingTime | millisToMinutes }}
+        <a class="ml-2 hover:text-primary" :href="page.github" target="_blank"
+          >¿Hay un error? Edita el artículo</a
+        >
+      </small>
       <nuxt-content :document="page" class="mt-4" />
       <PrevNext :prev="prev" :next="next" />
     </article>
@@ -24,7 +27,7 @@ export default {
   async asyncData({ $content, params }) {
     const page = await $content('blog', params.slug).fetch()
     const [prev, next] = await $content('blog')
-      .only(['title', 'slug'])
+      .only(['title', 'slug', 'github'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
       .fetch()

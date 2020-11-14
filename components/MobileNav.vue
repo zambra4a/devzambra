@@ -32,7 +32,6 @@
 export default {
   data() {
     return {
-      homeIcon: require('@/assets/icons/home.svg?inline'),
       blogIcon: require('@/assets/icons/blog.svg?inline'),
       projectsIcon: require('@/assets/icons/projects.svg?inline'),
       aboutIcon: require('@/assets/icons/about.svg?inline'),

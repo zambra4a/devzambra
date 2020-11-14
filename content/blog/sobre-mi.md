@@ -1,6 +1,7 @@
 ---
 title: Sobre mi
 description: '¿Quien soy yo? Esa es una buena pregunta.'
+github: 'https://github.com/devzambra/devzambra/edit/master/content/blog/sobre-mi.md'
 tags:
   - General
 ---
