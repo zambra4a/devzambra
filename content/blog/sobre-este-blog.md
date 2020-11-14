@@ -1,6 +1,7 @@
 ---
 title: Sobre este blog
 description: '¿Qué encontrarás en este blog?'
+github: 'https://github.com/devzambra/devzambra/edit/master/content/blog/sobre-este-blog.md'
 tags:
   - General
 ---
