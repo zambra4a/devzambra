@@ -18,40 +18,50 @@
             Si queréis saber más sobre mí o mi trabajo, podéis visitar el blog o
             seguirme por las redes sociales que aparecen abajo ☝☝
           </p>
-          <div class="flex justify-center items-center my-4">
+          <div
+            class="flex flex-col sm:flex-row justify-center items-center my-4"
+          >
             <nuxt-link
               to="/blog"
-              class="blog-button hover:opacity-75 bg-primary px-4 py-2 rounded-lg text-xl text-white font-bold mx-2"
+              class="my-2 sm:my-0 w-full sm:w-auto text-center blog-button hover:opacity-75 bg-primary px-4 py-2 rounded-lg text-xl text-white font-bold mx-2"
             >
               Blog
             </nuxt-link>
             <nuxt-link
+              to="/podcast"
+              class="my-2 sm:my-0 w-full sm:w-auto text-center blog-button hover:opacity-75 bg-primary px-4 py-2 rounded-lg text-xl text-white font-bold mx-2"
+            >
+              Podcast
+            </nuxt-link>
+            <nuxt-link
               to="/about"
-              class="about-button hover:bg-primary hover:text-white border-primary px-4 py-2 rounded-lg text-lg font-bold mx-2"
+              class="my-2 sm:my-0 w-full sm:w-auto text-center about-button hover:bg-primary hover:text-white border-primary px-4 py-2 rounded-lg text-lg font-bold mx-2"
             >
               Sobre mí
             </nuxt-link>
-            <a
-              href="https://www.linkedin.com/in/manuel-zambrano"
-              class="mx-2 h-8 w-8"
-              target="_blank"
-            >
-              <img style="width: 100%" src="@/assets/icons/linkedin.svg" />
-            </a>
-            <a
-              href="https://github.com/devzambra"
-              class="mx-2 h-8 w-8"
-              target="_blank"
-            >
-              <img style="width: 100%" src="@/assets/icons/github.svg" />
-            </a>
-            <a
-              href="mailto:dev.mzambrano@gmail.com"
-              class="mx-2 h-8 w-8"
-              target="_blank"
-            >
-              <img style="width: 100%" src="@/assets/icons/mail.svg" />
-            </a>
+            <div class="flex flex-row justfity-center items-center">
+              <a
+                href="https://www.linkedin.com/in/manuel-zambrano"
+                class="mx-2 h-8 w-8"
+                target="_blank"
+              >
+                <img style="width: 100%" src="@/assets/icons/linkedin.svg" />
+              </a>
+              <a
+                href="https://github.com/devzambra"
+                class="mx-2 h-8 w-8"
+                target="_blank"
+              >
+                <img style="width: 100%" src="@/assets/icons/github.svg" />
+              </a>
+              <a
+                href="mailto:dev.mzambrano@gmail.com"
+                class="mx-2 h-8 w-8"
+                target="_blank"
+              >
+                <img style="width: 100%" src="@/assets/icons/mail.svg" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -61,27 +71,7 @@
       </section>
       <section>
         <h2 class="text-3xl mb-4">Últimos capítulos del podcast</h2>
-        <article v-for="item in items" :key="item.guid" class="">
-          <div
-            class="flex flex-col justify-between items-center rounded shadow-lg p-5 my-5 hover:shadow-xl dark:bg-gray-900"
-          >
-            <div class="flex flex-col sm:flex-row justify-between items-center">
-              <div class="sm:mb-0 mb-4">
-                <img :src="item.itunes.image" class="w-40" />
-              </div>
-              <div class="ml-4">
-                <h3 class="font-bold text-xl">{{ item.title }}</h3>
-                <p>{{ item.contentSnippet }}</p>
-              </div>
-            </div>
-            <div class="flex w-full mt-2">
-              <audio controls class="flex w-full rounded">
-                <source :src="item.enclosure.url" :type="item.enclosure.type" />
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </div>
-        </article>
+        <PodcastList :items="items" />
       </section>
     </section>
   </main>
@@ -102,7 +92,9 @@ export default {
     )
     const { items } = rss
 
-    return { posts, items }
+    const resItems = items.slice(0, 3)
+
+    return { posts, items: resItems }
   },
 }
 </script>

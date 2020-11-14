@@ -7,10 +7,10 @@
       <nav class="flex items-center">
         <ul class="text-center hidden sm:flex">
           <li class="px-2 border-r-2 links">
-            <nuxt-link to="/" class="link" exact> Inicio </nuxt-link>
+            <nuxt-link to="/blog" class="link"> Blog </nuxt-link>
           </li>
           <li class="px-2 border-r-2 links">
-            <nuxt-link to="/blog" class="link"> Blog </nuxt-link>
+            <nuxt-link to="/podcast" class="link"> Podcast </nuxt-link>
           </li>
           <li class="px-2 border-r-2 links">
             <nuxt-link to="/projects" class="link"> Proyectos </nuxt-link>

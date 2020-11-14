@@ -3,7 +3,7 @@
     class="mt-10 flex-1 w-full h-full md:grid grid-flow-col grid-cols-3 gap-8 py-2"
   >
     <section class="col-span-2">
-      <h2 class="text-2xl">Últimas entradas del blog</h2>
+      <h2 class="text-2xl">Todas las entradas del blog</h2>
       <PostsList :posts="posts" />
     </section>
     <aside>

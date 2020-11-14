@@ -4,13 +4,13 @@
       <ul
         class="w-full h-full grid grid-flow-col grid-cols-4 gap-2 text-center py-2"
       >
-        <nuxt-link to="/" class="flex justify-end items-center flex-col" exact>
-          <component :is="homeIcon" class="h-6 w-6" />
-          <span>Inicio</span>
-        </nuxt-link>
         <nuxt-link to="/blog" class="flex justify-end items-center flex-col">
           <component :is="blogIcon" class="h-6 w-6" />
           <span>Blog</span>
+        </nuxt-link>
+        <nuxt-link to="/podcast" class="flex justify-end items-center flex-col">
+          <component :is="podcastIcon" class="h-6 w-6" />
+          <span>Podcast</span>
         </nuxt-link>
         <nuxt-link
           to="/projects"
@@ -36,6 +36,7 @@ export default {
       blogIcon: require('@/assets/icons/blog.svg?inline'),
       projectsIcon: require('@/assets/icons/projects.svg?inline'),
       aboutIcon: require('@/assets/icons/about.svg?inline'),
+      podcastIcon: require('@/assets/icons/mic.svg?inline'),
     }
   },
 }
